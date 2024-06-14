@@ -17,7 +17,7 @@
         $nombre_bd = $row['nombre'];
         $id_bd = $row['id_usuario'];
         
-        if ($password_bd == $password) {
+        if (password_verify($password,$password_bd)) {
             $_SESSION['id'] = $id_bd;
             $_SESSION['nombre'] = $nombre_bd;
             $_SESSION['email'] = $email;
