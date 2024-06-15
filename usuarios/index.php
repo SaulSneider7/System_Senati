@@ -2,7 +2,7 @@
     include_once '../app/config.php';
     include_once '../layout/session.php';
     //Lista de usuarios
-    $sql = "SELECT * FROM usuarios";
+    $sql = "SELECT * FROM vista_usuarios";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $usuarios = $result->fetch_all(MYSQLI_ASSOC);
@@ -39,7 +39,7 @@
             <tr>
                 <td><?php echo $usuario_dato['nombre'] ?></td>
                 <td><?php echo $usuario_dato['email'] ?></td>
-                <td><?php echo $usuario_dato['id_perfil'] ?></td>
+                <td><?php echo $usuario_dato['cargo'] ?></td>
                 <td>
                     <a href="show.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Ver</a>
                     <a href="edit.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Editar</a>

@@ -21,3 +21,15 @@ INSERT INTO perfiles (nombre) VALUES ('vendedor');
 
 INSERT INTO usuarios (id_perfil, nombre, email, password) VALUES (1, 'Karina', 'karina@senati', '12345');
 INSERT INTO usuarios (id_perfil, nombre, email, password) VALUES (1, 'Lorena', 'lorena@senati', '11111');
+
+--VISTAS
+CREATE OR REPLACE VIEW vista_usuarios 
+AS
+    SELECT 
+        u.id_usuario,
+        u.nombre,
+        u.email,
+        p.nombre as 'cargo'
+    FROM usuarios u
+    INNER JOIN perfiles p
+    ON u.id_perfil = p.id_perfil

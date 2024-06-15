@@ -19,15 +19,15 @@ $("#btn_crear_usuario").click(function(){
         },
         success: function(data){
             console.log(data);
-            if (data.success == 'success') {
+            if (data.status == 'success') {
                 alert('hola');
             } else {
                 alert('Error');
             }
         },
-        // error: function(data){
-        //     console.log(data);
-        //     alert(data.message);
-        // }
-    })
-})
+        error: function(data){
+            console.log(data);
+            alert(data.message);
+        }
+    });
+});
