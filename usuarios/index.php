@@ -41,17 +41,20 @@
                 <td><?php echo $usuario_dato['email'] ?></td>
                 <td><?php echo $usuario_dato['cargo'] ?></td>
                 <td>
-                    <a href="show.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Ver</a>
+                    <a href="ver.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Ver</a>
                     <a href="edit.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Editar</a>
-                    <a href="delete.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Eliminar</a>
+                    <button type="button" onclick="eliminar_usuario('<?php echo $usuario_dato['id_usuario'] ?>')">Eliminar</button>
+                    <a href="resetear.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Resetear</a>
                 </td>
             </tr>
             <?php
                 }   
-
             ?>
         </tbody>
     </table>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="<?php echo $ruta ?>public/js/usuario.js?v=<?php echo rand(1000,9999) ?>"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+console.log("login");
 $("#ingresar").click(function(){
     var email_formulario = $("#email").val();
     var password_formulario = $("#password").val();

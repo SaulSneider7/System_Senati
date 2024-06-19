@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Iniciar Sesion</h1>
@@ -19,6 +20,6 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../public/js/login.js"></script>
+    <script src="../public/js/login.js?v=<?php echo rand(1000,9999) ?>"></script>
 </body>
 </html>
