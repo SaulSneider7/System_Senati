@@ -78,5 +78,28 @@
                 ]);
             }
             break;
+        case 'resetPassword':
+            $id_usuario = $_POST['id_usuario'];
+            //Password por defecto
+            $password = "holamundo";
+            //Password encriptada
+            $password_reset = password_hash($password, PASSWORD_DEFAULT);
+
+            //Codigo SQL
+            $sql = "UPDATE usuarios SET password = '$password_reset' WHERE id_usuario = '$id_usuario'";
+            $query = mysqli_query($conn,  $sql);
+
+            if ($query) {
+                echo json_encode([
+                    "success" => "success",
+                    "message" => "Password Reseteado: ".$password
+                ]);
+            } else {
+                echo json_encode([
+                    "success" => "error",
+                    "message" => "ERROR: Password no reseteado"
+                ]);
+            }
+            break;
     }
 ?>

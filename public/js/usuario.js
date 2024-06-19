@@ -88,3 +88,27 @@ function eliminar_usuario(id_usuario) {
         }
     });
 }
+
+//RESETAR PASSWORD
+function resetPassword(id_usuario) {
+    $.ajax({
+        type: "POST",
+        url: "../app/controller/usuarios/UsuarioController.php",
+        dataType: "json",
+        data: {
+            action: 'resetPassword',
+            id_usuario: id_usuario,
+        },
+        success: function (data) {
+            console.log(data);
+            if (data.success == 'success') {
+                alert(data.message);
+            }else{
+                console.log(data);
+            }
+        },
+        error: function (data) {
+            console.log(data);
+        }
+    });
+}

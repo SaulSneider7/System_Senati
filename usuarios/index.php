@@ -44,7 +44,7 @@
                     <a href="ver.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Ver</a>
                     <a href="edit.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Editar</a>
                     <button type="button" onclick="eliminar_usuario('<?php echo $usuario_dato['id_usuario'] ?>')">Eliminar</button>
-                    <a href="resetear.php?id=<?php echo $usuario_dato['id_usuario'] ?>">Resetear</a>
+                    <a href="#" onclick="resetPassword('<?php echo $usuario_dato['id_usuario'] ?>')">Resetear</a>
                 </td>
             </tr>
             <?php
