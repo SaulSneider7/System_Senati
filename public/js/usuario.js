@@ -1,3 +1,9 @@
+// DATATABLE USUARIOS
+//Jquery
+$("#tabla_usuarios").DataTable();
+//JS
+// let table = new DataTable('#tabla_usuarios');
+
 // CREAR USUARIO
 $("#btn_crear_usuario").click(function () {
     var nombre = $("#nombre_usuario").val();

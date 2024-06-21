@@ -18,13 +18,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
 </head>
 
 <body>
     <?php include_once '../layout/header.php' ?>
     <h1>Lista de Usuarios</h1>
     <a href="crear.php">crear</a>
-    <table border='1'>
+    <table border='1' id="tabla_usuarios">
         <thead>
             <tr>
                 <th>nombre</th>
@@ -54,6 +56,9 @@
     </table>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Datatable JS -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <!-- Mi Script -->
     <script src="<?php echo $ruta ?>public/js/usuario.js?v=<?php echo rand(1000,9999) ?>"></script>
 </body>
 
